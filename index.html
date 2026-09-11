@@ -1,0 +1,1968 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="ocean">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- SEO Primario & Metadatos de Lujo -->
+  <title>Corales del Viento · Experiencia 3D Inmersiva | Grupo AAA S.A.S</title>
+  <meta name="description" content="Condominio Campestre Corales del Viento en San Bernardo del Viento, Córdoba. Lotes exclusivos a 150m del mar Caribe con visualización 3D interactiva, amenidades de lujo y respaldo legal garantizado por Grupo AAA.">
+  <meta name="keywords" content="Corales del Viento, Lotes frente al mar, San Bernardo del Viento, Grupo AAA, Inversión inmobiliaria Caribe, Lotes campestres Córdoba, Master Plan 3D">
+  <meta name="author" content="Grupo AAA S.A.S">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph / Meta Social -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Corales del Viento · Condominio Campestre de Lujo Frente al Mar">
+  <meta property="og:description" content="Experimenta el condominio campestre más exclusivo del Caribe colombiano a través de un recorrido 3D interactivo en tiempo real.">
+  <meta property="og:image" content="assets/images/hero.jpg">
+  <meta property="og:locale" content="es_CO">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Favicon SVG Náutico -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%230052A3'/><path d='M25 72 C 40 45, 60 88, 75 65 C 65 35, 35 35, 25 72 Z' fill='%23D4AF8F'/><circle cx='50' cy='30' r='12' fill='%230099FF'/></svg>" type="image/svg+xml">
+
+  <!-- Tipografía Oficial: Poppins (Display/Headings/CTAs) & Inter (Body/Lectura) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Leaflet CSS para el Mapa Interactivo -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+
+  <!-- Estilos Maestros V3.0 -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ==========================================
+       MARCA DE AGUA DE SEGURIDAD / PROPIEDAD INTELECTUAL
+       ========================================== -->
+  <div class="watermark-protection-overlay" aria-hidden="true">
+    <div class="watermark-pattern"></div>
+    <div class="watermark-banner banner-1">
+      <span>ANDRES BERMUDEZ · PROPIEDAD INTELECTUAL · MAQUETA EXCLUSIVA</span>
+    </div>
+    <div class="watermark-banner banner-2">
+      <span>ANDRES BERMUDEZ · MAQUETA CONCEPTUAL · GRUPO AAA S.A.S</span>
+    </div>
+    <div class="watermark-banner banner-3">
+      <span>ANDRES BERMUDEZ · COND. CAMPESTRE CORALES DEL VIENTO</span>
+    </div>
+    <div class="watermark-floating-badge">
+      <span class="badge-icon">🔒</span>
+      <span class="badge-text">Maqueta Protegida · <strong>Andrés Bermúdez</strong></span>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       PROGRESS BAR (SCROLL DE LECTURA)
+       ========================================== -->
+  <div class="scroll-progress-bar" id="scrollProgressBar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+
+  <!-- ==========================================
+       STICKY HEADER GLASSMORPHIC
+       ========================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-container">
+      <!-- Marca Principal Grupo AAA -->
+      <a href="#hero" class="brand-logo" aria-label="Grupo AAA S.A.S Inicio">
+        <div class="logo-badge">
+          <span class="badge-text">AAA</span>
+        </div>
+        <div class="logo-meta">
+          <span class="company-name">GRUPO AAA S.A.S</span>
+          <span class="project-tag">Firma Inmobiliaria & Desarrollos</span>
+        </div>
+      </a>
+
+      <!-- Navegación Principal Simplificada y Centrada (Multi-Proyecto) -->
+      <nav class="nav-desktop" id="navDesktop" aria-label="Navegación principal">
+        <ul class="nav-links">
+          <li><a href="#hero" class="nav-link active">Inicio</a></li>
+          <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
+          <li><a href="#galeria-3d" class="nav-link">Corales 3D</a></li>
+          <li><a href="#servicios" class="nav-link">Servicios</a></li>
+          <li><a href="#financiamiento" class="nav-link">Financiamiento</a></li>
+          <li><a href="#nosotros" class="nav-link">Nosotros</a></li>
+        </ul>
+      </nav>
+
+      <!-- Acciones de Cabecera: Selector de Iluminación + WhatsApp CTA -->
+      <div class="header-actions">
+        <!-- Control de Hora del Día para iluminación 3D -->
+        <div class="time-presets" title="Cambiar iluminación del 3D">
+          <button class="time-btn active" data-time="day" aria-label="Modo Mediodía">☀️</button>
+          <button class="time-btn" data-time="sunset" aria-label="Modo Atardecer">🌅</button>
+          <button class="time-btn" data-time="night" aria-label="Modo Noche">🌙</button>
+        </div>
+
+        <a href="https://wa.me/573122384172?text=Hola%20Grupo%20AAA%2C%20quiero%20conocer%20los%20lotes%20exclusivos%20de%20Corales%20del%20Viento" 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           class="btn-header-cta" 
+           id="headerWaBtn">
+          <span class="cta-pulse"></span>
+          <svg class="wa-icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+            <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.699c.971.53 1.77.813 2.796.813h.005c3.179 0 5.767-2.587 5.767-5.766.001-3.187-2.575-5.999-5.772-5.999zm3.385 8.163c-.145.411-.744.757-1.028.805-.285.048-.654.076-2.128-.535-1.875-.778-3.08-2.698-3.175-.824-.095-.126-.749-.997-.749-1.902 0-.904.475-1.35.644-1.534.17-.184.37-.23.493-.23.123 0 .247.001.354.006.113.006.264-.043.413.315.15.358.513 1.25.558 1.342.045.093.076.201.015.323-.061.123-.092.2-.183.307-.092.108-.194.24-.277.323-.093.092-.19.193-.082.379.108.185.48 792 1.028 1.28.705.629 1.3 1.823 1.485 1.916.185.093.293.077.4-.046.108-.124.462-.538.585-.723.123-.185.246-.154.415-.092.17.062 1.077.508 1.262.6.185.092.308.139.354.215.046.077.046.446-.099.857z"/>
+          </svg>
+          <span>Asesor VIP</span>
+        </a>
+
+        <!-- Botón Móvil Menú Hamburguesa -->
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Abrir menú" aria-expanded="false">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Menú Móvil Desplegable -->
+    <div class="mobile-drawer" id="mobileDrawer">
+      <ul class="mobile-links">
+        <li><a href="#hero" class="mobile-link">Inicio</a></li>
+        <li><a href="#proyectos" class="mobile-link">Portafolio de Proyectos</a></li>
+        <li><a href="#galeria-3d" class="mobile-link">Corales del Viento 3D</a></li>
+        <li><a href="#servicios" class="mobile-link">Servicios Inmobiliarios & Jurídicos</a></li>
+        <li><a href="#nosotros" class="mobile-link">Quiénes Somos Grupo AAA</a></li>
+        <li><a href="#buscador" class="mobile-link">Lotes Disponibles</a></li>
+        <li><a href="#financiamiento" class="mobile-link">Simulador Financiero</a></li>
+        <li><a href="#ubicacion" class="mobile-link">Ubicación Náutica</a></li>
+        <li><a href="#faq" class="mobile-link">Preguntas Frecuentes</a></li>
+      </ul>
+      <div class="mobile-drawer-cta">
+        <a href="https://wa.me/573122384172?text=Hola%20Grupo%20AAA%2C%20quiero%20informaci%C3%B3n%20sobre%20Corales%20del%20Viento" class="btn-primary w-full text-center">Contactar por WhatsApp</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==========================================
+         1️⃣ HERO 3D CINEMATIC (Experiencia de Impacto)
+         ========================================== -->
+    <section class="hero-section" id="hero" aria-label="Hero 3D Cinematic">
+      <!-- Contenedor WebGL 3D (Three.js Océano Procedural + Partículas + Cielo) -->
+      <div class="hero-canvas-container" id="heroCanvasContainer" style="opacity: 0;">
+        <canvas id="heroCanvas" aria-label="Visualización 3D interactiva del océano"></canvas>
+      </div>
+
+      <!-- Video Dron HD Real (Nuevo Video en Encabezado) -->
+      <div class="hero-video-container active" id="heroVideoContainer">
+        <video id="heroVideo" autoplay loop muted playsinline preload="auto" poster="assets/images/imagen_encabezado_corales.jpg">
+          <source src="assets/videos/Drone_flying_over_beach_lots_20260910185118.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <!-- Gradiente y atmósfera sutil -->
+      <div class="hero-atmosphere-overlay"></div>
+
+      <!-- Controles flotantes del Hero -->
+      <div class="hero-mode-switch">
+        <button class="mode-switch-btn active" id="btnModeVideo" title="Modo Dron 4K Real">
+          <span class="icon">🚁</span> Dron 4K
+        </button>
+        <button class="mode-switch-btn" id="btnMode3D" title="Modo 3D Interactivo WebGL">
+          <span class="icon">🌊</span> 3D Procedural
+        </button>
+      </div>
+
+      <!-- Contenido Superpuesto Cinematográfico -->
+      <div class="hero-content">
+        <div class="hero-pill-badge">
+          <span class="sparkle">✦</span>
+          <span>Grupo AAA S.A.S · Desarrollos Inmobiliarios en el Caribe</span>
+        </div>
+
+        <h1 class="hero-main-title">
+          Inversiones Inmobiliarias de Alto Valor en el <br>
+          <span class="title-gradient">Caribe Colombiano</span>
+        </h1>
+
+        <p class="hero-lead">
+          Estructuramos, urbanizamos y comercializamos condominios campestres y proyectos costeros con respaldo jurídico 100% blindado. Conoce nuestro portafolio y vive el recorrido 3D inmersivo de nuestro proyecto insignia: <strong>Corales del Viento</strong>.
+        </p>
+
+        <!-- Stats en Tiempo Real con Contadores Animados -->
+        <div class="hero-stats-strip">
+          <div class="stat-card">
+            <span class="stat-number" data-target="4" id="statProyectos">0</span>
+            <span class="stat-label">Grandes Proyectos</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-card">
+            <span class="stat-number" data-target="45" id="statLotes">0</span><span class="stat-plus">+</span>
+            <span class="stat-label">Lotes en Corales 3D</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-card">
+            <span class="stat-number" data-target="150" id="statDistancia">0</span><span class="stat-plus">m</span>
+            <span class="stat-label">Al Mar en San Bernardo</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-card">
+            <span class="stat-number" data-target="98" id="statSatisfaccion">0</span><span class="stat-plus">%</span>
+            <span class="stat-label">Clientes Satisfechos</span>
+          </div>
+        </div>
+
+        <!-- Grupo de Botones de Acción -->
+        <div class="hero-actions-group">
+          <a href="#proyectos" class="btn-primary-glow" id="heroExploreBtn">
+            <span class="glow-effect"></span>
+            <span class="btn-content">
+              Ver Portafolio de Proyectos
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </span>
+          </a>
+
+          <a href="#galeria-3d" class="btn-secondary-glass">
+            <span class="icon">🌊</span> Proyecto Insignia 3D
+          </a>
+        </div>
+
+        <!-- Mouse Scroll Prompt -->
+        <div class="hero-scroll-indicator" id="heroScrollIndicator">
+          <div class="mouse-icon">
+            <div class="wheel"></div>
+          </div>
+          <span>Desliza para explorar</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         🌟 PORTAFOLIO MULTI-PROYECTOS GRUPO AAA S.A.S
+         ========================================== -->
+    <section class="projects-portfolio-section" id="proyectos" aria-label="Portafolio de Proyectos Inmobiliarios">
+      <div class="section-container">
+        <div class="section-header text-center">
+          <div class="kicker">Desarrollos Inmobiliarios en Expansión</div>
+          <h2 class="section-title">Portafolio de Proyectos Grupo AAA</h2>
+          <p class="section-subtitle">Conoce nuestros proyectos campestres, residenciales y costeros estratégicamente estructurados en Córdoba y el Caribe colombiano.</p>
+        </div>
+
+        <!-- Filtros de Proyectos -->
+        <div class="portfolio-filter-tabs">
+          <button class="port-tab active" data-filter="all">Todos los Proyectos</button>
+          <button class="port-tab" data-filter="mar">Frente al Mar / Costeros</button>
+          <button class="port-tab" data-filter="campestre">Campestres</button>
+          <button class="port-tab" data-filter="preventa">En Preventa</button>
+        </div>
+
+        <!-- Grid de Proyectos -->
+        <div class="portfolio-projects-grid">
+          <!-- Proyecto 1: Insignia 3D Corales del Viento -->
+          <article class="project-portfolio-card featured" data-cat="mar">
+            <div class="pcard-badge-row">
+              <span class="pcard-badge star">★ Proyecto Insignia · En Ventas</span>
+              <span class="pcard-badge location">📍 San Bernardo del Viento, Córdoba</span>
+            </div>
+            <div class="pcard-img-holder">
+              <img src="assets/images/hero.jpg" alt="Condominio Corales del Viento" loading="lazy">
+              <div class="pcard-tag-3d">Experiencia 3D Activa</div>
+            </div>
+            <div class="pcard-body">
+              <h3 class="pcard-title">Condominio Campestre Corales del Viento</h3>
+              <p class="pcard-desc">Lotes exclusivos a 150m de la playa con Club House, piscina sinfín, vías amplias y acometidas de energía y agua. 100% saneado con matrícula individual.</p>
+              
+              <div class="pcard-specs-row">
+                <div class="pspec-item">
+                  <span>Áreas:</span>
+                  <strong>Desde 450 m²</strong>
+                </div>
+                <div class="pspec-item">
+                  <span>Inversión:</span>
+                  <strong class="gold">Desde $88.000.000 COP</strong>
+                </div>
+                <div class="pspec-item">
+                  <span>Financiación:</span>
+                  <strong>Hasta 60 meses</strong>
+                </div>
+              </div>
+
+              <div class="pcard-actions">
+                <a href="#galeria-3d" class="btn-primary">Ver Master Plan 3D</a>
+                <a href="#buscador" class="btn-secondary">Lotes Disponibles</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Proyecto 2: Bahía Cispatá Eco-Village -->
+          <article class="project-portfolio-card" data-cat="mar preventa">
+            <div class="pcard-badge-row">
+              <span class="pcard-badge preventa">Próximo Lanzamiento · Preventa</span>
+              <span class="pcard-badge location">📍 San Antero / Bahía Cispatá</span>
+            </div>
+            <div class="pcard-img-holder">
+              <img src="assets/images/lote-mar.jpg" alt="Bahía Cispatá Eco-Village" loading="lazy">
+            </div>
+            <div class="pcard-body">
+              <h3 class="pcard-title">Bahía Cispatá Eco-Village</h3>
+              <p class="pcard-desc">Condominio náutico y ecológico con muelle privado, acceso directo a la bahía y canales navegables. Diseñado para descanso y deportes marinos.</p>
+              
+              <div class="pcard-specs-row">
+                <div class="pspec-item">
+                  <span>Áreas:</span>
+                  <strong>Desde 600 m²</strong>
+                </div>
+                <div class="pspec-item">
+                  <span>Inversión:</span>
+                  <strong class="gold">Desde $130.000.000 COP</strong>
+                </div>
+                <div class="pspec-item">
+                  <span>Estado:</span>
+                  <strong>Lista Cero Preventa</strong>
+                </div>
+              </div>
+
+              <div class="pcard-actions">
+                <a href="https://wa.me/573122384172?text=Hola%20Grupo%20AAA%2C%20quiero%20registrarme%20en%20la%20lista%20de%20preventa%20de%20Bah%C3%ADa%20Cispat%C3%A1%20Eco-Village" 
+                   target="_blank" rel="noopener noreferrer" class="btn-primary w-full text-center">
+                  Registrar Interés en Preventa
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Proyecto 3: Palmeras del Sinú -->
+          <article class="project-portfolio-card" data-cat="campestre">
+            <div class="pcard-badge-row">
+              <span class="pcard-badge soldout">90% Vendido · Últimos Lotes</span>
+              <span class="pcard-badge location">📍 Eje Montería - Cereté</span>
+            </div>
+            <div class="pcard-img-holder">
+              <img src="assets/images/lote-campestre.jpg" alt="Palmeras del Sinú Parcelación" loading="lazy">
+            </div>
+            <div class="pcard-body">
+              <h3 class="pcard-title">Palmeras del Sinú · Parcelación</h3>
+              <p class="pcard-desc">Desarrollo campestre residencial de alta categoría a 10 minutos de Montería. Lagos paisajísticos, senderos ecuestres y portería vigilada 24h.</p>
+              
+              <div class="pcard-specs-row">
+                <div class="pspec-item">
+                  <span>Áreas:</span>
+                  <strong>Desde 800 m²</strong>
+                </div>
+                <div class="pspec-item">
+                  <span>Inversión:</span>
+                  <strong class="gold">Desde $95.000.000 COP</strong>
+                </div>
+                <div class="pspec-item">
+                  <span>Entrega:</span>
+                  <strong>Inmediata</strong>
+                </div>
+              </div>
+
+              <div class="pcard-actions">
+                <a href="https://wa.me/573122384172?text=Hola%20Grupo%20AAA%2C%20deseo%20conocer%20los%20%C3%BAltimos%20lotes%20disponibles%20en%20Palmeras%20del%20Sin%C3%BA" 
+                   target="_blank" rel="noopener noreferrer" class="btn-secondary w-full text-center">
+                  Consultar Últimos Lotes
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Proyecto 4: Altos de la Ensenada -->
+          <article class="project-portfolio-card" data-cat="mar preventa">
+            <div class="pcard-badge-row">
+              <span class="pcard-badge preventa">Preventa Exclusiva</span>
+              <span class="pcard-badge location">📍 Coveñas / Tolú, Sucre</span>
+            </div>
+            <div class="pcard-img-holder">
+              <img src="assets/images/lifestyle.jpg" alt="Altos de la Ensenada Villas" loading="lazy">
+            </div>
+            <div class="pcard-body">
+              <h3 class="pcard-title">Altos de la Ensenada · Villas & Terrenos</h3>
+              <p class="pcard-desc">Complejo en colina con vista panorámica infinita al Golfo de Morrosquillo. Club de playa privado, mirador y arquitectura bioclimática moderna.</p>
+              
+              <div class="pcard-specs-row">
+                <div class="pspec-item">
+                  <span>Áreas:</span>
+                  <strong>Desde 500 m²</strong>
+                </div>
+                <div class="pspec-item">
+                  <span>Inversión:</span>
+                  <strong class="gold">Desde $150.000.000 COP</strong>
+                </div>
+                <div class="pspec-item">
+                  <span>Modalidad:</span>
+                  <strong>Lotes & Villas</strong>
+                </div>
+              </div>
+
+              <div class="pcard-actions">
+                <a href="https://wa.me/573122384172?text=Hola%20Grupo%20AAA%2C%20solicito%20informaci%C3%B3n%20y%20brochure%20de%20Altos%20de%20la%20Ensenada%20en%20Cove%C3%B1as" 
+                   target="_blank" rel="noopener noreferrer" class="btn-secondary w-full text-center">
+                  Solicitar Brochure VIP
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         ⚖️ SERVICIOS INMOBILIARIOS & GARANTÍA LEGAL GRUPO AAA
+         ========================================== -->
+    <section class="services-corporate-section" id="servicios" aria-label="Servicios Inmobiliarios y Respaldo Legal">
+      <div class="section-container">
+        <div class="section-header text-center">
+          <div class="kicker">Capacidad Integral 360°</div>
+          <h2 class="section-title">Servicios Inmobiliarios y Jurídicos</h2>
+          <p class="section-subtitle">Grupo AAA S.A.S no solo vende lotes: estructuramos, urbanizamos, saneamos y construimos con estándares de excelencia en todo el Caribe.</p>
+        </div>
+
+        <div class="services-corporate-grid">
+          <div class="service-corp-card">
+            <div class="scorp-icon">🏛️</div>
+            <h3>Estructuración & Urbanismo</h3>
+            <p>Selección y desarrollo de tierras con estudios topográficos, red vial afirmada, tendido eléctrico certificado y redes de agua potable garantizadas.</p>
+            <span class="scorp-check">✓ Obras reales y garantizadas</span>
+          </div>
+
+          <div class="service-corp-card">
+            <div class="scorp-icon">⚖️</div>
+            <h3>Seguridad Jurídica & Matrículas</h3>
+            <p>Bufete jurídico interno propio. Gestionamos desenglobes, saneamiento catastral, paz y salvos y escrituración pública individual inmediata ante notaría.</p>
+            <span class="scorp-check">✓ Cero proindivisos · 100% blindado</span>
+          </div>
+
+          <div class="service-corp-card">
+            <div class="scorp-icon">📐</div>
+            <h3>Diseño Bioclimático & Construcción</h3>
+            <p>Arquitectura adaptada a la brisa marina caribeña. Ofrecemos modelos de casas campestres llave en mano en madera teca, concreto a la vista y palma nativa.</p>
+            <span class="scorp-check">✓ Construcción personalizada</span>
+          </div>
+
+          <div class="service-corp-card">
+            <div class="scorp-icon">📈</div>
+            <h3>Gerencia de Inversiones Inmobiliarias</h3>
+            <p>Asesoramos a inversionistas y fondos familiares en la selección de activos con la mayor tasa interna de retorno (TIR) y plusvalía en el litoral cordobés.</p>
+            <span class="scorp-check">✓ Plusvalía proyectada +22% anual</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         🏢 QUIÉNES SOMOS - GRUPO AAA S.A.S
+         ========================================== -->
+    <section class="about-corporate-section" id="nosotros" aria-label="Quiénes Somos Grupo AAA">
+      <div class="section-container">
+        <div class="about-corporate-layout">
+          <div class="about-corp-content">
+            <div class="kicker">Trayectoria & Confianza</div>
+            <h2 class="section-title">Quiénes Somos · Grupo AAA S.A.S</h2>
+            <p class="about-lead">
+              Somos una firma desarrolladora e inmobiliaria líder en la estructuración de comunidades campestres y turísticas en Córdoba y el Caribe colombiano.
+            </p>
+            <p class="about-text">
+              Nacimos con el propósito de conectar a familias e inversionistas con el verdadero paraíso natural caribeño, respaldados siempre por una gestión jurídica rigurosa, infraestructura técnica de primer nivel y un trato personalizado.
+            </p>
+
+            <div class="about-corp-stats">
+              <div class="cstat-box">
+                <strong class="cstat-num">+12</strong>
+                <span class="cstat-lbl">Años de Trayectoria</span>
+              </div>
+              <div class="cstat-box">
+                <strong class="cstat-num">+4</strong>
+                <span class="cstat-lbl">Grandes Proyectos</span>
+              </div>
+              <div class="cstat-box">
+                <strong class="cstat-num">+180</strong>
+                <span class="cstat-lbl">Hectáreas Gestionadas</span>
+              </div>
+              <div class="cstat-box">
+                <strong class="cstat-num">100%</strong>
+                <span class="cstat-lbl">Blindaje Notarial</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-corp-visual">
+            <img src="assets/images/imagen_encabezado_corales.jpg" alt="Equipo y Obras Grupo AAA" loading="lazy">
+            <div class="corp-quote-bubble">
+              <p>"Transformamos la tierra caribeña en un patrimonio seguro para tu familia y tus futuras generaciones."</p>
+              <span>— Dirección General Grupo AAA S.A.S</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         PROYECTO INSIGNIA 3D: CORALES DEL VIENTO
+         ========================================== -->
+    <div class="flagship-divider-banner">
+      <div class="section-container text-center">
+        <span class="flagship-kicker">Showcase 3D · Proyecto Insignia Actual</span>
+        <h2 class="flagship-title">Condominio Campestre Corales del Viento</h2>
+        <p class="flagship-desc">Explora en tiempo real el master plan interactivo, disponibilidad de lotes a 150m del mar y simulador de inversión de nuestro proyecto estrella.</p>
+      </div>
+    </div>
+
+    <!-- ==========================================
+         2️⃣ PARALLAX NARRATIVO VERTICAL (Story Reveal)
+         ========================================== -->
+    <section class="narrative-section" id="historia" aria-label="Historia y Revelación de Corales del Viento">
+      <div class="section-container">
+        <div class="narrative-header text-center">
+          <div class="kicker">Nuestra Trayectoria</div>
+          <h2 class="section-title">El Origen de una Obra Maestra</h2>
+          <p class="section-subtitle">Acompaña a Grupo AAA en el viaje de transformar la costa caribeña en un refugio de valorización y confort familiar.</p>
+        </div>
+
+        <!-- Contenedor Parallax 4 Capas -->
+        <div class="story-reveal-container" id="storyReveal">
+          <!-- Capa 1: El Descubrimiento -->
+          <article class="story-layer layer-1" data-layer="1">
+            <div class="story-layer-content">
+              <span class="layer-step">Hito 01 / 04</span>
+              <h3 class="layer-title">Descubrimos un Lugar Especial</h3>
+              <p class="layer-desc">Playas vírgenes, brisa marina constante y atardeceres dorados en San Bernardo del Viento. Identificamos el punto exacto donde la naturaleza y el descanso convergen.</p>
+              <div class="layer-tag">Topografía privilegiada · 150m de la orilla</div>
+            </div>
+            <div class="story-layer-visual">
+              <img src="assets/images/lote-mar.jpg" alt="Playa de San Bernardo del Viento" loading="lazy" class="story-img">
+              <div class="visual-badge">Punto Cero</div>
+            </div>
+          </article>
+
+          <!-- Capa 2: La Visión -->
+          <article class="story-layer layer-2" data-layer="2">
+            <div class="story-layer-content">
+              <span class="layer-step">Hito 02 / 04</span>
+              <h3 class="layer-title">Imaginamos un Proyecto Diferente</h3>
+              <p class="layer-desc">No concebimos un loteo común. Diseñamos un condominio campestre con arquitectura bioclimática, vías amplias, club de playa privado y zonas verdes exuberantes.</p>
+              <div class="layer-tag">Master Plan Sostenible · 45 parcelas premium</div>
+            </div>
+            <div class="story-layer-visual">
+              <img src="assets/images/amenities.jpg" alt="Diseño conceptual de Corales del Viento" loading="lazy" class="story-img">
+              <div class="visual-badge">Diseño Arquitectónico</div>
+            </div>
+          </article>
+
+          <!-- Capa 3: La Construcción -->
+          <article class="story-layer layer-3" data-layer="3">
+            <div class="story-layer-content">
+              <span class="layer-step">Hito 03 / 04</span>
+              <h3 class="layer-title">Construimos con Pasión y Rigor</h3>
+              <p class="layer-desc">Urbanismo con redes eléctricas y de agua, vías de acceso afirmadas, cerramiento perimetral y trazado exacto de cada lote con georreferenciación milimétrica.</p>
+              <div class="layer-tag">Servicios garantizados · Obras activas</div>
+            </div>
+            <div class="story-layer-visual">
+              <img src="assets/images/lote-campestre.jpg" alt="Construcción y obras en Corales del Viento" loading="lazy" class="story-img">
+              <div class="visual-badge">Infraestructura Real</div>
+            </div>
+          </article>
+
+          <!-- Capa 4: La Realidad -->
+          <article class="story-layer layer-4" data-layer="4">
+            <div class="story-layer-content">
+              <span class="layer-step">Hito 04 / 04</span>
+              <h3 class="layer-title">Hoy Ofrecemos Sueños y Rentabilidad</h3>
+              <p class="layer-desc">Un patrimonio sólido con escrituración individual inmediata y una plusvalía proyectada superior al 22% anual. Tu refugio frente al mar ya es una realidad tangible.</p>
+              <div class="layer-tag">Entrega inmediata · Seguridad jurídica 100%</div>
+            </div>
+            <div class="story-layer-visual">
+              <img src="assets/images/lifestyle.jpg" alt="Vida campestre de lujo en Corales del Viento" loading="lazy" class="story-img">
+              <div class="visual-badge">Entrega y Disfrute</div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         3️⃣ GALERÍA INTERACTIVA 3D DEL PROYECTO
+         ========================================== -->
+    <section class="gallery-3d-section" id="galeria-3d" aria-label="Visor 3D del Master Plan">
+      <div class="section-container">
+        <div class="section-header text-center">
+          <div class="kicker">Visualización Inmersiva</div>
+          <h2 class="section-title">Master Plan 3D Interactivo</h2>
+          <p class="section-subtitle">Explora el condominio en tres dimensiones. Rota, acerca y selecciona cualquier zona para inspeccionar sus características y cercanía a la playa.</p>
+        </div>
+
+        <div class="viewer-3d-layout">
+          <!-- Columna Izquierda: Canvas 3D + Controles Cinemáticos -->
+          <div class="viewer-viewport-wrapper">
+            <div class="canvas-3d-container" id="masterPlanCanvasContainer">
+              <canvas id="masterPlanCanvas" aria-label="Modelo 3D interactivo del condominio"></canvas>
+              
+              <!-- Loader 3D -->
+              <div class="viewer-loader" id="viewerLoader">
+                <div class="spinner-ring"></div>
+                <span>Renderizando escenario 3D...</span>
+              </div>
+
+              <!-- Tooltip flotante al hacer hover o clic en lotes 3D -->
+              <div class="lot-3d-tooltip" id="lot3dTooltip">
+                <div class="tooltip-title" id="tooltipTitle">Lote 07 - Sector Playa</div>
+                <div class="tooltip-desc" id="tooltipDesc">Área: 450 m² · A 150m del mar</div>
+              </div>
+            </div>
+
+            <!-- Botones Cinemáticos de Ángulos de Cámara -->
+            <div class="camera-presets-bar">
+              <button class="cam-btn active" data-cam="aerial" title="Vista Aérea General">
+                <span class="cam-icon">🚁</span> Aéreo
+              </button>
+              <button class="cam-btn" data-cam="beach" title="Vista Frente a la Playa">
+                <span class="cam-icon">🏖️</span> Acceso Playa
+              </button>
+              <button class="cam-btn" data-cam="amenities" title="Vista Club House y Piscinas">
+                <span class="cam-icon">🏊</span> Zonas Comunes
+              </button>
+              <button class="cam-btn" data-cam="sunset" title="Vista Golden Hour">
+                <span class="cam-icon">🌅</span> Atardecer
+              </button>
+            </div>
+
+            <div class="interaction-hints">
+              <span>🖱️ Arrastra para rotar</span>
+              <span>🔍 Rueda para zoom</span>
+              <span>👆 Toca un pin para ver detalles</span>
+            </div>
+          </div>
+
+          <!-- Columna Derecha: Ficha Técnica Dinámica del Lote Seleccionado -->
+          <div class="viewer-info-panel" id="viewerInfoPanel">
+            <div class="panel-header">
+              <span class="panel-badge" id="panelLotStatus">Disponible</span>
+              <h3 class="panel-title" id="panelLotTitle">Lote 12 · Sector Costa Dorada</h3>
+              <p class="panel-subtitle" id="panelLotZone">Ubicación privilegiada con acceso peatonal directo a la orilla del mar.</p>
+            </div>
+
+            <div class="lot-specs-grid">
+              <div class="spec-box">
+                <span class="spec-label">Área Total</span>
+                <span class="spec-value" id="panelLotArea">480 m²</span>
+              </div>
+              <div class="spec-box">
+                <span class="spec-label">Distancia Playa</span>
+                <span class="spec-value" id="panelLotDistance">150 metros</span>
+              </div>
+              <div class="spec-box">
+                <span class="spec-label">Inversión Desde</span>
+                <span class="spec-value highlight" id="panelLotPrice">$98.000.000 COP</span>
+              </div>
+              <div class="spec-box">
+                <span class="spec-label">Disponibilidad</span>
+                <span class="spec-value" id="panelLotStatusText">Escritura Inmediata</span>
+              </div>
+            </div>
+
+            <!-- Miniaturas Clickeables que mueven la cámara 3D -->
+            <div class="view-thumbnails-group">
+              <span class="thumbnails-label">Vistas del Sector:</span>
+              <div class="thumbnails-row">
+                <button class="thumb-btn active" data-cam="aerial">
+                  <img src="assets/images/hero.jpg" alt="Vista aérea" loading="lazy">
+                  <span>Plano General</span>
+                </button>
+                <button class="thumb-btn" data-cam="beach">
+                  <img src="assets/images/lote-mar.jpg" alt="Acceso playa" loading="lazy">
+                  <span>Sendero Playa</span>
+                </button>
+                <button class="thumb-btn" data-cam="amenities">
+                  <img src="assets/images/amenities.jpg" alt="Zonas comunes" loading="lazy">
+                  <span>Club House</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Acciones del Lote -->
+            <div class="panel-actions">
+              <a href="https://wa.me/573122384172?text=Hola%20Grupo%20AAA%2C%20estoy%20interesado%20en%20el%20Lote%2012%20de%20Corales%20del%20Viento%20que%20vi%20en%20el%20Master%20Plan%203D" 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 class="btn-primary w-full text-center" 
+                 id="panelLotWaBtn">
+                Apartar este Lote por WhatsApp
+              </a>
+
+              <button class="btn-favorite" id="btnFavoriteLot" aria-label="Guardar en favoritos">
+                <span class="heart-icon">🤍</span>
+                <span class="fav-text">Guardar en Favoritos</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         4️⃣ CARDS EDUCATIVAS CON MICROINTERACCIONES
+         ========================================== -->
+    <section class="pillars-section" id="pilares" aria-label="Pilares de Excelencia">
+      <div class="section-container">
+        <div class="section-header text-center">
+          <div class="kicker">Calidad Certificada</div>
+          <h2 class="section-title">Pilares de Inversión Segura</h2>
+          <p class="section-subtitle">Toca cada tarjeta para desplegar las especificaciones técnicas y legales que diferencian a Corales del Viento.</p>
+        </div>
+
+        <div class="cards-interactive-grid">
+          <!-- Card 1: Seguridad Jurídica -->
+          <article class="interactive-card" tabindex="0">
+            <div class="card-icon-wrapper">
+              <svg class="pillar-svg" viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                <path d="m9 12 2 2 4-4"/>
+              </svg>
+            </div>
+            <h3 class="card-title">Seguridad Jurídica y Título</h3>
+            <p class="card-summary">Predio con matrícula inmobiliaria independiente, paz y salvo fiscal y tradición intachable.</p>
+            <div class="card-expand-content">
+              <ul class="spec-list">
+                <li>✓ Escrituración pública individual ante notaría.</li>
+                <li>✓ Licencias de urbanismo en regla y vigentes.</li>
+                <li>✓ Respaldo corporativo de Grupo AAA S.A.S.</li>
+                <li>✓ Sin gravámenes ni hipotecas previas.</li>
+              </ul>
+            </div>
+            <div class="card-footer-action">
+              <span class="learn-more">Ver detalles legales <span class="arrow">→</span></span>
+            </div>
+          </article>
+
+          <!-- Card 2: Urbanismo y Servicios -->
+          <article class="interactive-card" tabindex="0">
+            <div class="card-icon-wrapper">
+              <svg class="pillar-svg" viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+              </svg>
+            </div>
+            <h3 class="card-title">Servicios e Infraestructura</h3>
+            <p class="card-summary">Infraestructura planificada para construir tu casa de descanso sin contratiempos.</p>
+            <div class="card-expand-content">
+              <ul class="spec-list">
+                <li>✓ Acometida de energía eléctrica a pie de lote.</li>
+                <li>✓ Sistema de suministro de agua potable garantizado.</li>
+                <li>✓ Vías internas amplias de 8m y 10m afirmadas.</li>
+                <li>✓ Alumbrado con tecnología solar eficiente.</li>
+              </ul>
+            </div>
+            <div class="card-footer-action">
+              <span class="learn-more">Ver especificaciones <span class="arrow">→</span></span>
+            </div>
+          </article>
+
+          <!-- Card 3: Club House y Amenidades -->
+          <article class="interactive-card" tabindex="0">
+            <div class="card-icon-wrapper">
+              <svg class="pillar-svg" viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M2 18h20M2 14c3-2 6-2 9 0s6 2 9 0M2 10c3-2 6-2 9 0s6 2 9 0"/>
+              </svg>
+            </div>
+            <h3 class="card-title">Club de Playa & Amenidades</h3>
+            <p class="card-summary">Espacios recreativos diseñados para el disfrute familiar y la desconexión total.</p>
+            <div class="card-expand-content">
+              <ul class="spec-list">
+                <li>✓ Piscina sinfín para adultos y niños con solárium.</li>
+                <li>✓ Kiosco social estilo caribeño con zona BBQ.</li>
+                <li>✓ Senderos ecológicos y zonas de lectura sombreadas.</li>
+                <li>✓ Parque infantil y canchas recreativas.</li>
+              </ul>
+            </div>
+            <div class="card-footer-action">
+              <span class="learn-more">Ver amenidades <span class="arrow">→</span></span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         5️⃣ SECCIÓN COMPARATIVO 3D (Diferenciadores)
+         ========================================== -->
+    <section class="comparative-section" id="diferenciadores" aria-label="Diferenciadores 3D">
+      <div class="section-container">
+        <div class="section-header text-center">
+          <div class="kicker">Ventaja Competitiva</div>
+          <h2 class="section-title">¿Por Qué Corales del Viento?</h2>
+          <p class="section-subtitle">Navega a través de nuestros 4 diferenciales estratégicos frente a los loteos convencionales de la región.</p>
+        </div>
+
+        <!-- Barra de Navegación del Carrusel Comparativo -->
+        <div class="comparative-tabs" role="tablist">
+          <button class="comp-tab active" data-slide="0" role="tab" aria-selected="true">
+            <span class="tab-num">01</span> Ubicación Náutica
+          </button>
+          <button class="comp-tab" data-slide="1" role="tab" aria-selected="false">
+            <span class="tab-num">02</span> Amenidades Isométricas
+          </button>
+          <button class="comp-tab" data-slide="2" role="tab" aria-selected="false">
+            <span class="tab-num">03</span> Tabla Comparativa
+          </button>
+          <button class="comp-tab" data-slide="3" role="tab" aria-selected="false">
+            <span class="tab-num">04</span> Línea de Tiempo
+          </button>
+        </div>
+
+        <!-- Slides del Carrusel -->
+        <div class="comparative-carousel-wrapper">
+          <!-- Slide 1: Ubicación Radar -->
+          <div class="comp-slide active" id="compSlide0">
+            <div class="radar-visual-grid">
+              <div class="radar-display">
+                <div class="radar-circle circle-10k"><span class="radar-tag">10 km</span></div>
+                <div class="radar-circle circle-5k"><span class="radar-tag">5 km</span></div>
+                <div class="radar-circle circle-2k"><span class="radar-tag">2 km</span></div>
+                <div class="radar-center-pin">
+                  <div class="pin-pulse"></div>
+                  <div class="pin-dot">★</div>
+                  <span class="pin-label">Corales del Viento</span>
+                </div>
+                <div class="radar-poi poi-playa" style="top: 25%; left: 45%;">🏖️ Playa (150m)</div>
+                <div class="radar-poi poi-pueblo" style="top: 70%; left: 30%;">🏪 San Bernardo (3.2km)</div>
+                <div class="radar-poi poi-isla" style="top: 20%; left: 80%;">🏝️ Isla Fuerte (Lancha)</div>
+              </div>
+              <div class="radar-info">
+                <h3>Ubicación Estratégica Incomparable</h3>
+                <p>A solo 150 metros del mar, en una zona de alta valorización turística en San Bernardo del Viento, Córdoba. Disfruta de la tranquilidad del mar sin el ruido ni la saturación de las grandes ciudades.</p>
+                <div class="quick-distance-pills">
+                  <span class="distance-pill">🌊 150m al Mar</span>
+                  <span class="distance-pill">🚗 5 min Casco Urbano</span>
+                  <span class="distance-pill">🚤 20 min Isla Fuerte</span>
+                  <span class="distance-pill">✈️ 1h 20m Aeropuerto Montería</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2: Amenidades Isométricas -->
+          <div class="comp-slide" id="compSlide1">
+            <div class="isometric-grid">
+              <div class="iso-card" data-iso="piscina">
+                <div class="iso-img-holder">
+                  <img src="assets/images/amenities.jpg" alt="Piscina sinfín" loading="lazy">
+                  <div class="iso-badge">Piscina Sinfín</div>
+                </div>
+                <h4>Complejo Acuático</h4>
+                <p>Piscina para adultos con carril de nado, playa húmeda y piscina infantil con acabados en piedra natural.</p>
+              </div>
+
+              <div class="iso-card" data-iso="kiosco">
+                <div class="iso-img-holder">
+                  <img src="assets/images/lifestyle.jpg" alt="Kiosco Club" loading="lazy">
+                  <div class="iso-badge">Club Social</div>
+                </div>
+                <h4>Kiosco & BBQ Lounge</h4>
+                <p>Espacios cubiertos para celebraciones privadas, parrilla argentina y bar de bebidas con vista a jardines.</p>
+              </div>
+
+              <div class="iso-card" data-iso="playa">
+                <div class="iso-img-holder">
+                  <img src="assets/images/lote-mar.jpg" alt="Sendero playa" loading="lazy">
+                  <div class="iso-badge">Sendero Ecológico</div>
+                </div>
+                <h4>Paseo a la Playa</h4>
+                <p>Sendero privado delimitado con palmeras y vegetación nativa para llegar caminando en 2 minutos a la orilla.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3: Tabla Comparativa Interactiva -->
+          <div class="comp-slide" id="compSlide2">
+            <div class="comparison-table-wrapper">
+              <table class="comparison-table">
+                <thead>
+                  <tr>
+                    <th>Característica</th>
+                    <th class="brand-column">Corales del Viento (Grupo AAA)</th>
+                    <th class="other-column">Loteos Tradicionales</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Distancia real a la playa</strong></td>
+                    <td class="brand-cell"><span class="highlight-check">✓ 150 metros reales (caminando)</span></td>
+                    <td>800m a 3km de distancia</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Seguridad jurídica</strong></td>
+                    <td class="brand-cell"><span class="highlight-check">✓ Matrícula inmobiliaria individual</span></td>
+                    <td>Cesión de derechos / Proindiviso</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Servicios instalados</strong></td>
+                    <td class="brand-cell"><span class="highlight-check">✓ Energía + Agua en cada lote</span></td>
+                    <td>Sin acometidas garantizadas</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Club de Playa & Piscinas</strong></td>
+                    <td class="brand-cell"><span class="highlight-check">✓ Incluido en el condominio</span></td>
+                    <td>No cuenta con amenidades</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Planes de Pago Directo</strong></td>
+                    <td class="brand-cell"><span class="highlight-check">✓ Hasta 60% sin intermediarios</span></td>
+                    <td>Solo pago de contado estricto</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Slide 4: Timeline Histórica -->
+          <div class="comp-slide" id="compSlide3">
+            <div class="historical-timeline">
+              <div class="timeline-step">
+                <div class="step-circle">01</div>
+                <div class="step-content">
+                  <h5>Selección y Estudios Topográficos</h5>
+                  <p>Estudio de suelos, niveles freáticos y evaluación ambiental en San Bernardo del Viento.</p>
+                </div>
+              </div>
+              <div class="timeline-step">
+                <div class="step-circle">02</div>
+                <div class="step-content">
+                  <h5>Licenciamiento y Trazado de Urbanismo</h5>
+                  <p>Aprobación de planimetría y diseño de vías amplias con drenajes naturales.</p>
+                </div>
+              </div>
+              <div class="timeline-step">
+                <div class="step-circle">03</div>
+                <div class="step-content">
+                  <h5>Instalación de Redes Eléctricas</h5>
+                  <p>Tendido de red eléctrica certificada y acometidas directas a cada parcela.</p>
+                </div>
+              </div>
+              <div class="timeline-step">
+                <div class="step-circle">04</div>
+                <div class="step-content">
+                  <h5>Construcción de Zonas Recreativas</h5>
+                  <p>Ejecución del club social, piscinas y senderos ecológicos directos al mar.</p>
+                </div>
+              </div>
+              <div class="timeline-step">
+                <div class="step-circle">05</div>
+                <div class="step-content">
+                  <h5>Fase de Entregas y Escrituración</h5>
+                  <p>Firma notarial individual y entrega material de lotes listos para edificar.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         6️⃣ TESTIMONIOS CON AVATAR 3D ANIMADO
+         ========================================== -->
+    <section class="testimonials-section" id="testimonios" aria-label="Testimonios de Clientes">
+      <div class="section-container">
+        <div class="section-header text-center">
+          <div class="kicker">Experiencias Reales</div>
+          <h2 class="section-title">Inversionistas que Ya Viven el Sueño</h2>
+          <p class="section-subtitle">Familias y profesionales de toda Colombia que confiaron su patrimonio a Grupo AAA.</p>
+        </div>
+
+        <div class="testimonials-3d-layout">
+          <!-- Lado Izquierdo: Avatar 3D Procedural en Three.js -->
+          <div class="avatar-3d-wrapper">
+            <div class="avatar-canvas-container" id="avatarCanvasContainer">
+              <canvas id="avatarCanvas" aria-label="Avatar 3D interactivo del testimonio"></canvas>
+            </div>
+            <div class="avatar-sound-waves">
+              <span class="wave-bar"></span>
+              <span class="wave-bar"></span>
+              <span class="wave-bar"></span>
+              <span class="wave-bar"></span>
+              <span class="wave-bar"></span>
+            </div>
+            <div class="avatar-badge">Avatar 3D · Conoce sus historias</div>
+          </div>
+
+          <!-- Lado Derecho: Carrusel Dinámico de Testimonios -->
+          <div class="testimonial-content-wrapper">
+            <div class="quote-mark">“</div>
+            
+            <div class="testimonial-slide active" id="testiSlide0">
+              <div class="stars-row">★★★★★ <span class="stars-score">5.0 / 5.0</span></div>
+              <p class="quote-text">
+                "Comprar en Corales del Viento fue la mejor decisión para nuestra familia. La cercanía al mar es real: caminamos con los niños descalzos en menos de tres minutos. La seriedad de Grupo AAA en las escrituras nos dio una tranquilidad total."
+              </p>
+              <div class="client-info">
+                <h4 class="client-name">Dra. María González</h4>
+                <span class="client-origin">Médica Especialista · Bogotá D.C.</span>
+                <span class="client-lot">Propietaria Lote 08</span>
+              </div>
+            </div>
+
+            <div class="testimonial-slide" id="testiSlide1">
+              <div class="stars-row">★★★★★ <span class="stars-score">5.0 / 5.0</span></div>
+              <p class="quote-text">
+                "Buscaba un proyecto con alta rentabilidad para diversificar mis inversiones. En menos de 10 meses la plusvalía del sector ha superado todas mis expectativas. El Master Plan 3D reflejó con exactitud la topografía y las vías."
+              </p>
+              <div class="client-info">
+                <h4 class="client-name">Carlos A. López</h4>
+                <span class="client-origin">Empresario · Medellín, Antioquia</span>
+                <span class="client-lot">Inversionista Lotes 15 y 16</span>
+              </div>
+            </div>
+
+            <div class="testimonial-slide" id="testiSlide2">
+              <div class="stars-row">★★★★★ <span class="stars-score">5.0 / 5.0</span></div>
+              <p class="quote-text">
+                "La asesoría jurídica y el plan de financiamiento directo de Grupo AAA hicieron todo sencillo y sin papeleos bancarios engorrosos. Ya iniciamos el diseño de nuestra cabaña campestre."
+              </p>
+              <div class="client-info">
+                <h4 class="client-name">Ana Lucía Rodríguez</h4>
+                <span class="client-origin">Arquitecta · Cali, Valle</span>
+                <span class="client-lot">Propietaria Lote 22</span>
+              </div>
+            </div>
+
+            <div class="testimonial-slide" id="testiSlide3">
+              <div class="stars-row">★★★★★ <span class="stars-score">5.0 / 5.0</span></div>
+              <p class="quote-text">
+                "Como barranquillero conozco todo el litoral Caribe, y San Bernardo del Viento tiene una magia y una calidez únicas. Corales del Viento es el proyecto más ordenado y con mejor proyección de la zona."
+              </p>
+              <div class="client-info">
+                <h4 class="client-name">Juan Martínez</h4>
+                <span class="client-origin">Ingeniero Civil · Barranquilla</span>
+                <span class="client-lot">Propietario Lote 31</span>
+              </div>
+            </div>
+
+            <!-- Navegación de Testimonios -->
+            <div class="testimonial-controls">
+              <div class="testi-dots">
+                <button class="testi-dot active" data-testi="0" aria-label="Ver testimonio 1"></button>
+                <button class="testi-dot" data-testi="1" aria-label="Ver testimonio 2"></button>
+                <button class="testi-dot" data-testi="2" aria-label="Ver testimonio 3"></button>
+                <button class="testi-dot" data-testi="3" aria-label="Ver testimonio 4"></button>
+              </div>
+
+              <div class="testi-arrows">
+                <button class="arrow-btn" id="btnPrevTesti" aria-label="Testimonio anterior">←</button>
+                <button class="arrow-btn" id="btnNextTesti" aria-label="Siguiente testimonio">→</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         7️⃣ PROCESO DE COMPRA INTERACTIVO (5 Pasos)
+         ========================================== -->
+    <section class="process-section" id="proceso" aria-label="Proceso de Compra Transparente">
+      <div class="section-container">
+        <div class="section-header text-center">
+          <div class="kicker">Ruta Segura</div>
+          <h2 class="section-title">Cómo Adquirir Tu Lote en 5 Pasos</h2>
+          <p class="section-subtitle">Un proceso ágil, transparente y con acompañamiento jurídico personalizado de inicio a fin.</p>
+        </div>
+
+        <div class="process-timeline-wrapper">
+          <!-- Línea de Conexión SVG animada con gradiente -->
+          <svg class="process-svg-line" viewBox="0 0 1000 10" preserveAspectRatio="none">
+            <line x1="0" y1="5" x2="1000" y2="5" stroke="rgba(255,255,255,0.15)" stroke-width="4"/>
+            <line id="animatedProcessLine" x1="0" y1="5" x2="0" y2="5" stroke="url(#lineGradient)" stroke-width="4"/>
+            <defs>
+              <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#0099FF"/>
+                <stop offset="50%" stop-color="#D4AF8F"/>
+                <stop offset="100%" stop-color="#1B6B3F"/>
+              </linearGradient>
+            </defs>
+          </svg>
+
+          <!-- 5 Pasos -->
+          <div class="process-steps-grid">
+            <!-- Paso 1 -->
+            <div class="process-step-card active" data-step="1">
+              <div class="step-num-badge">1</div>
+              <div class="step-icon">💬</div>
+              <h3 class="step-title">Consulta Inicial</h3>
+              <p class="step-desc">Asesoría personalizada con un ejecutivo senior para resolver tus dudas de ubicación y presupuesto.</p>
+              <span class="step-time">⏱️ 5 a 10 minutos</span>
+              <a href="https://wa.me/573122384172?text=Hola%2C%20quiero%20iniciar%20mi%20consulta%20para%20adquirir%20un%20lote%20en%20Corales%20del%20Viento" class="step-btn">Iniciar Consulta</a>
+            </div>
+
+            <!-- Paso 2 -->
+            <div class="process-step-card" data-step="2">
+              <div class="step-num-badge">2</div>
+              <div class="step-icon">🗺️</div>
+              <h3 class="step-title">Selección de Lote</h3>
+              <p class="step-desc">Elige la ubicación exacta de tu preferencia en el Master Plan 3D según tus gustos y necesidades.</p>
+              <span class="step-time">⏱️ 1 a 2 días</span>
+              <a href="#buscador" class="step-btn">Ver Disponibilidad</a>
+            </div>
+
+            <!-- Paso 3 -->
+            <div class="process-step-card" data-step="3">
+              <div class="step-num-badge">3</div>
+              <div class="step-icon">📑</div>
+              <h3 class="step-title">Reserva & Jurídica</h3>
+              <p class="step-desc">Asegura tu lote con un anticipo accesible y recibe los documentos de tradición y libertad para tu revisión.</p>
+              <span class="step-time">⏱️ 2 a 3 días</span>
+              <span class="step-badge">100% Blindado</span>
+            </div>
+
+            <!-- Paso 4 -->
+            <div class="process-step-card" data-step="4">
+              <div class="step-num-badge">4</div>
+              <div class="step-icon">✍️</div>
+              <h3 class="step-title">Plan de Pago & Firma</h3>
+              <p class="step-desc">Elige entre pago de contado o plan financiado hasta 60 meses. Firma de promesa de compraventa.</p>
+              <span class="step-time">⏱️ 1 a 2 semanas</span>
+              <a href="#financiamiento" class="step-btn">Simular Cuota</a>
+            </div>
+
+            <!-- Paso 5 -->
+            <div class="process-step-card" data-step="5">
+              <div class="step-num-badge">5</div>
+              <div class="step-icon">🔑</div>
+              <h3 class="step-title">Escritura & Entrega</h3>
+              <p class="step-desc">Firma notarial de escritura pública individual. Entrega material de tu lote listo para construir tu sueño.</p>
+              <span class="step-time">⏱️ 3 a 4 semanas</span>
+              <span class="step-badge-gold">¡Felicidades!</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="process-guarantee-banner">
+          <div class="guarantee-icon">🛡️</div>
+          <div class="guarantee-text">
+            <strong>Garantía Integral Grupo AAA:</strong> Todo el proceso se completa en promedio en <strong>3 a 4 semanas</strong>, cumpliendo todas las normativas notariales y catastrales de Colombia.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         8️⃣ BÚSQUEDA AVANZADA CON FILTROS EN TIEMPO REAL
+         ========================================== -->
+    <section class="search-section" id="buscador" aria-label="Buscador Interactivo de Lotes">
+      <div class="section-container">
+        <div class="section-header text-center">
+          <div class="kicker">Disponibilidad en Vivo</div>
+          <h2 class="section-title">Encuentra Tu Lote Ideal</h2>
+          <p class="section-subtitle">Filtra por área, presupuesto y cercanía al mar para encontrar la parcela perfecta para tu proyecto campestre.</p>
+        </div>
+
+        <div class="search-engine-layout">
+          <!-- Panel Izquierdo: Filtros -->
+          <aside class="search-filters-panel">
+            <div class="filters-header">
+              <h3>Filtros de Búsqueda</h3>
+              <button class="btn-reset-filters" id="btnResetFilters" title="Restablecer todos los filtros">
+                <span class="reset-icon">↺</span> Limpiar
+              </button>
+            </div>
+
+            <!-- Filtro 1: Búsqueda por texto / código -->
+            <div class="filter-group">
+              <label for="filterSearchText" class="filter-label">Nombre o Número de Lote</label>
+              <div class="input-with-icon">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+                <input type="text" id="filterSearchText" placeholder="Ej: Lote 05, Costa, Mar..." autocomplete="off">
+              </div>
+            </div>
+
+            <!-- Filtro 2: Rango de Área m² -->
+            <div class="filter-group">
+              <div class="filter-label-row">
+                <label class="filter-label">Área Mínima (m²)</label>
+                <span class="filter-display-val" id="displayAreaVal">350 m²</span>
+              </div>
+              <input type="range" id="filterArea" min="350" max="1000" step="50" value="350" class="custom-range">
+              <div class="range-endpoints">
+                <span>350 m²</span>
+                <span>1.000 m²</span>
+              </div>
+            </div>
+
+            <!-- Filtro 3: Presupuesto Máximo (COP) -->
+            <div class="filter-group">
+              <div class="filter-label-row">
+                <label class="filter-label">Presupuesto Máximo</label>
+                <span class="filter-display-val" id="displayBudgetVal">$180M COP</span>
+              </div>
+              <input type="range" id="filterBudget" min="80" max="250" step="10" value="250" class="custom-range">
+              <div class="range-endpoints">
+                <span>$80M</span>
+                <span>$250M+</span>
+              </div>
+            </div>
+
+            <!-- Filtro 4: Ubicación / Sector -->
+            <div class="filter-group">
+              <label class="filter-label">Sector del Condominio</label>
+              <div class="sector-radio-group">
+                <label class="custom-radio">
+                  <input type="radio" name="filterSector" value="all" checked>
+                  <span class="radio-mark"></span>
+                  <span>Todos los Sectores</span>
+                </label>
+                <label class="custom-radio">
+                  <input type="radio" name="filterSector" value="playa">
+                  <span class="radio-mark"></span>
+                  <span>Frente al Mar (150m)</span>
+                </label>
+                <label class="custom-radio">
+                  <input type="radio" name="filterSector" value="club">
+                  <span class="radio-mark"></span>
+                  <span>Cerca a Zonas Comunes</span>
+                </label>
+                <label class="custom-radio">
+                  <input type="radio" name="filterSector" value="bosque">
+                  <span class="radio-mark"></span>
+                  <span>Sector Campestre</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Filtro 5: Solo Disponibles -->
+            <div class="filter-group">
+              <label class="custom-checkbox">
+                <input type="checkbox" id="filterOnlyAvailable" checked>
+                <span class="checkbox-mark"></span>
+                <span>Mostrar únicamente disponibles</span>
+              </label>
+            </div>
+          </aside>
+
+          <!-- Panel Derecho: Resultados Grid -->
+          <div class="search-results-panel">
+            <div class="results-header-bar">
+              <div class="results-counter" id="resultsCounter">
+                Mostrando <strong id="visibleCount">0</strong> de 45 lotes
+              </div>
+              <div class="results-sort">
+                <label for="sortSelect">Ordenar por:</label>
+                <select id="sortSelect" class="custom-select">
+                  <option value="featured">Destacados</option>
+                  <option value="price-asc">Menor Precio</option>
+                  <option value="price-desc">Mayor Precio</option>
+                  <option value="area-desc">Mayor Área</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Grid de Tarjetas de Lotes -->
+            <div class="lots-cards-grid" id="lotsCardsGrid">
+              <!-- Se puebla dinámicamente con JavaScript -->
+            </div>
+
+            <!-- Mensaje Estado Vacío -->
+            <div class="empty-results-state" id="emptyResultsState" style="display: none;">
+              <div class="empty-icon">🏝️</div>
+              <h3>No se encontraron lotes con estos criterios</h3>
+              <p>Intenta ajustar el rango de precio o el área seleccionada para ver más opciones disponibles.</p>
+              <button class="btn-secondary" id="btnResetFiltersEmpty">Restablecer Filtros</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         9️⃣ SECCIÓN MULTIMEDIA NARRATIVA (Video Dron + Masonry Lightbox)
+         ========================================== -->
+    <section class="multimedia-section" id="multimedia" aria-label="Galería Multimedia y Video Dron">
+      <div class="section-container">
+        <div class="section-header text-center">
+          <div class="kicker">Experiencia Visual 4K</div>
+          <h2 class="section-title">Un Recorrido por el Paraíso</h2>
+          <p class="section-subtitle">Aprecia la belleza natural de San Bernardo del Viento y el avance del condominio a través de nuestra galería de alta resolución.</p>
+        </div>
+
+        <!-- Video Hero Interactivo con Player Personalizado -->
+        <div class="custom-video-player-wrapper">
+          <video id="multimediaVideo" class="custom-video-element" poster="assets/images/hero.jpg" playsinline preload="metadata">
+            <source src="assets/videos/hero-drone.mp4" type="video/mp4">
+            <source src="assets/videos/Drone_ascending_over_beach_shore_20260910165943-ezgif.com-video-to-webp-converter.mp4" type="video/mp4">
+          </video>
+
+          <!-- Overlay con Controles Personalizados -->
+          <div class="video-custom-controls" id="videoControls">
+            <button class="video-ctrl-btn" id="btnVideoPlayPause" aria-label="Reproducir o Pausar">
+              <span class="ctrl-icon play">▶</span>
+              <span class="ctrl-icon pause" style="display:none;">⏸</span>
+            </button>
+            <div class="video-progress-container" id="videoProgressBar">
+              <div class="video-progress-fill" id="videoProgressFill"></div>
+            </div>
+            <span class="video-time-display" id="videoTimeDisplay">00:00 / 00:00</span>
+            <button class="video-ctrl-btn" id="btnVideoMute" aria-label="Silenciar o Activar Sonido">
+              <span class="ctrl-icon">🔊</span>
+            </button>
+            <button class="video-ctrl-btn" id="btnVideoFullscreen" aria-label="Pantalla Completa">
+              <span class="ctrl-icon">⛶</span>
+            </button>
+          </div>
+          <div class="video-badge-pill">Dron 4K Ultra HD · San Bernardo del Viento</div>
+        </div>
+
+        <!-- Galería Masonry con 6 Imágenes de Impacto -->
+        <div class="masonry-gallery-grid" id="masonryGallery">
+          <div class="masonry-item" data-index="0">
+            <img src="assets/images/hero.jpg" alt="Amanecer sobre Corales del Viento" loading="lazy">
+            <div class="masonry-overlay">
+              <span class="overlay-tag">Vista Aérea</span>
+              <h4 class="overlay-title">Amanecer Frente al Caribe</h4>
+              <button class="btn-zoom-lightbox" aria-label="Ver imagen ampliada">🔍</button>
+            </div>
+          </div>
+
+          <div class="masonry-item" data-index="1">
+            <img src="assets/images/lote-mar.jpg" alt="Acceso directo a la playa de San Bernardo" loading="lazy">
+            <div class="masonry-overlay">
+              <span class="overlay-tag">Playa</span>
+              <h4 class="overlay-title">A 150 Metros de la Orilla</h4>
+              <button class="btn-zoom-lightbox" aria-label="Ver imagen ampliada">🔍</button>
+            </div>
+          </div>
+
+          <div class="masonry-item" data-index="2">
+            <img src="assets/images/amenities.jpg" alt="Piscina y Club Social" loading="lazy">
+            <div class="masonry-overlay">
+              <span class="overlay-tag">Amenidades</span>
+              <h4 class="overlay-title">Piscina Sinfín & Solárium</h4>
+              <button class="btn-zoom-lightbox" aria-label="Ver imagen ampliada">🔍</button>
+            </div>
+          </div>
+
+          <div class="masonry-item" data-index="3">
+            <img src="assets/images/lifestyle.jpg" alt="Estilo de vida campestre de lujo" loading="lazy">
+            <div class="masonry-overlay">
+              <span class="overlay-tag">Estilo de Vida</span>
+              <h4 class="overlay-title">Confort y Descanso en Familia</h4>
+              <button class="btn-zoom-lightbox" aria-label="Ver imagen ampliada">🔍</button>
+            </div>
+          </div>
+
+          <div class="masonry-item" data-index="4">
+            <img src="assets/images/lote-campestre.jpg" alt="Topografía de los lotes campestres" loading="lazy">
+            <div class="masonry-overlay">
+              <span class="overlay-tag">Parcelas</span>
+              <h4 class="overlay-title">Lotes Planos y Listos para Construir</h4>
+              <button class="btn-zoom-lightbox" aria-label="Ver imagen ampliada">🔍</button>
+            </div>
+          </div>
+
+          <div class="masonry-item" data-index="5">
+            <img src="assets/images/imagen_encabezado_corales.jpg" alt="Panorámica general del condominio" loading="lazy">
+            <div class="masonry-overlay">
+              <span class="overlay-tag">Master Plan</span>
+              <h4 class="overlay-title">Diseño Bioclimático Integral</h4>
+              <button class="btn-zoom-lightbox" aria-label="Ver imagen ampliada">🔍</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         🔟 SECCIÓN FINANCIERA (Simulador de Pagos Interactivo)
+         ========================================== -->
+    <section class="financial-section" id="financiamiento" aria-label="Planes de Financiamiento y Simulador">
+      <div class="section-container">
+        <div class="section-header text-center">
+          <div class="kicker">Facilidades a tu Medida</div>
+          <h2 class="section-title">Opciones de Financiamiento</h2>
+          <p class="section-subtitle">Calcula en tiempo real tu cuota mensual o aprovecha atractivos descuentos por pago de contado.</p>
+        </div>
+
+        <div class="finance-card-wrapper">
+          <!-- Pestañas de Modalidades de Pago -->
+          <div class="finance-tabs" role="tablist">
+            <button class="finance-tab active" data-tab="credito" role="tab" aria-selected="true">
+              🏦 Crédito Bancario / Simulador
+            </button>
+            <button class="finance-tab" data-tab="contado" role="tab" aria-selected="false">
+              💵 Pago de Contado (5% OFF)
+            </button>
+            <button class="finance-tab" data-tab="directo" role="tab" aria-selected="false">
+              🤝 Crédito Directo Grupo AAA
+            </button>
+            <button class="finance-tab" data-tab="escalonado" role="tab" aria-selected="false">
+              📈 Plan Escalonado
+            </button>
+          </div>
+
+          <!-- Contenido Tab 1: Simulador Crédito Bancario -->
+          <div class="finance-tab-pane active" id="paneCredito">
+            <div class="simulator-layout">
+              <div class="simulator-inputs">
+                <!-- Input Monto -->
+                <div class="sim-group">
+                  <div class="sim-header-row">
+                    <label class="sim-label">Valor del Lote a Financiar</label>
+                    <span class="sim-value-display" id="simLoanAmountDisplay">$110.000.000 COP</span>
+                  </div>
+                  <input type="range" id="simLoanAmount" min="70000000" max="250000000" step="5000000" value="110000000" class="custom-range">
+                  <div class="range-endpoints">
+                    <span>$70M</span>
+                    <span>$250M</span>
+                  </div>
+                </div>
+
+                <!-- Input Cuota Inicial -->
+                <div class="sim-group">
+                  <div class="sim-header-row">
+                    <label class="sim-label">Cuota Inicial (30%)</label>
+                    <span class="sim-value-display" id="simInitialDisplay">$33.000.000 COP</span>
+                  </div>
+                  <input type="range" id="simInitialPercent" min="20" max="60" step="5" value="30" class="custom-range">
+                  <div class="range-endpoints">
+                    <span>20%</span>
+                    <span>60%</span>
+                  </div>
+                </div>
+
+                <!-- Input Plazo -->
+                <div class="sim-group">
+                  <label class="sim-label" for="simTermSelect">Plazo del Financiamiento</label>
+                  <select id="simTermSelect" class="custom-select w-full">
+                    <option value="12">12 meses (1 año)</option>
+                    <option value="24">24 meses (2 años)</option>
+                    <option value="36" selected>36 meses (3 años)</option>
+                    <option value="48">48 meses (4 años)</option>
+                    <option value="60">60 meses (5 años)</option>
+                  </select>
+                </div>
+
+                <!-- Tasa de Referencia -->
+                <div class="sim-rate-badge">
+                  <span>Tasa preferencial aliada: <strong>1.1% Mes Vencido (~14% E.A.)</strong></span>
+                </div>
+              </div>
+
+              <!-- Tarjeta de Resultados del Simulador -->
+              <div class="simulator-results-card">
+                <div class="result-badge">Cálculo Estimado</div>
+                <div class="monthly-payment-block">
+                  <span class="label">Cuota Mensual Estimada</span>
+                  <div class="payment-amount" id="simMonthlyResult">$2.610.000</div>
+                  <span class="currency">Pesos Colombianos (COP) / mes</span>
+                </div>
+
+                <div class="sim-breakdown">
+                  <div class="breakdown-row">
+                    <span>Monto Financiado:</span>
+                    <strong id="simNetFinanced">$77.000.000 COP</strong>
+                  </div>
+                  <div class="breakdown-row">
+                    <span>Cuota Inicial (30%):</span>
+                    <strong id="simInitialValue">$33.000.000 COP</strong>
+                  </div>
+                  <div class="breakdown-row">
+                    <span>Plazo Seleccionado:</span>
+                    <strong id="simTermMonths">36 meses</strong>
+                  </div>
+                  <div class="breakdown-row">
+                    <span>Estudio de Crédito:</span>
+                    <strong class="text-green">¡Sin costo con aliados!</strong>
+                  </div>
+                </div>
+
+                <a href="https://wa.me/573122384172?text=Hola%20Grupo%20AAA%2C%20acabo%20de%20hacer%20una%20simulaci%C3%B3n%20para%20un%20lote%20de%20%24110.000.000%20a%2036%20meses%20en%20Corales%20del%20Viento%2C%20quiero%20m%C3%A1s%20detalles." 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   class="btn-primary-glow w-full text-center" 
+                   id="btnApplyLoan">
+                  Solicitar Cotización Formal
+                </a>
+
+                <div class="allied-banks-logos">
+                  <span class="allied-label">Entidades Aliadas:</span>
+                  <span class="bank-tag">Bancolombia</span>
+                  <span class="bank-tag">Davivienda</span>
+                  <span class="bank-tag">BBVA</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contenido Tab 2: Pago de Contado -->
+          <div class="finance-tab-pane" id="paneContado">
+            <div class="cash-deal-card">
+              <div class="deal-badge">Beneficio Exclusivo</div>
+              <h3>5% de Descuento Inmediato por Pago de Contado</h3>
+              <p>Al abonar la totalidad del lote al momento de la firma, ahorras hasta <strong>$12.500.000 COP</strong> y obtienes escrituración prioritaria en menos de 15 días hábiles.</p>
+              
+              <div class="deal-perks-grid">
+                <div class="perk-item">
+                  <span class="perk-icon">💰</span>
+                  <h4>Ahorro Directo</h4>
+                  <p>Reducción neta sobre el valor total de lista.</p>
+                </div>
+                <div class="perk-item">
+                  <span class="perk-icon">⚡</span>
+                  <h4>Escritura Exprés</h4>
+                  <p>Trámite notarial prioritario sin intermediarios.</p>
+                </div>
+                <div class="perk-item">
+                  <span class="perk-icon">🎁</span>
+                  <h4>Gastos Notariales 50/50</h4>
+                  <p>Apoyo en gastos notariales asumido por Grupo AAA.</p>
+                </div>
+              </div>
+
+              <a href="https://wa.me/573122384172?text=Hola%20Grupo%20AAA%2C%20quiero%20conocer%20el%20descuento%20del%205%25%20por%20pago%20de%20contado%20para%20un%20lote%20en%20Corales%20del%20Viento" class="btn-primary">Aprovechar Descuento de Contado</a>
+            </div>
+          </div>
+
+          <!-- Contenido Tab 3: Crédito Directo Grupo AAA -->
+          <div class="finance-tab-pane" id="paneDirecto">
+            <div class="direct-credit-card">
+              <div class="deal-badge">Financiación Propia</div>
+              <h3>Financia hasta el 60% Directamente con Nosotros</h3>
+              <p>Sin historial crediticio obligatorio ni demoras de aprobación bancaria. Grupo AAA te financia directamente con plazos flexibles de hasta 48 meses.</p>
+              <div class="direct-steps">
+                <div class="d-step">
+                  <span class="d-num">1</span>
+                  <h4>Aprobación en 48 Horas</h4>
+                  <p>Solo requerimos fotocopia de cédula y soporte básico de ingresos.</p>
+                </div>
+                <div class="d-step">
+                  <span class="d-num">2</span>
+                  <h4>Cuotas Fijas en Pesos</h4>
+                  <p>Sin indexación a UVR ni fluctuaciones de mercado.</p>
+                </div>
+                <div class="d-step">
+                  <span class="d-num">3</span>
+                  <h4>Abonos a Capital sin Penalidad</h4>
+                  <p>Liquida o adelanta cuotas cuando lo desees sin cargos extra.</p>
+                </div>
+              </div>
+              <a href="https://wa.me/573122384172?text=Hola%20Grupo%20AAA%2C%20quiero%20aplicar%20al%20Cr%C3%A9dito%20Directo%20sin%20bancos%20para%20Corales%20del%20Viento" class="btn-primary">Solicitar Crédito Directo</a>
+            </div>
+          </div>
+
+          <!-- Contenido Tab 4: Plan Escalonado -->
+          <div class="finance-tab-pane" id="paneEscalonado">
+            <div class="stepped-plan-card">
+              <div class="deal-badge">Por Avance de Obra</div>
+              <h3>Plan de Pago por Hitos Urbanísticos</h3>
+              <p>Abona tu lote de acuerdo al avance de la infraestructura física del condominio:</p>
+              <div class="stepped-bars">
+                <div class="step-bar-item">
+                  <div class="step-bar-label">
+                    <span>20% A la Separación</span>
+                    <strong>Firma de Promesa</strong>
+                  </div>
+                  <div class="bar-track"><div class="bar-fill" style="width: 20%;"></div></div>
+                </div>
+                <div class="step-bar-item">
+                  <div class="step-bar-label">
+                    <span>40% Durante la Obra</span>
+                    <strong>Cuotas mensuales durante el urbanismo</strong>
+                  </div>
+                  <div class="bar-track"><div class="bar-fill" style="width: 40%;"></div></div>
+                </div>
+                <div class="step-bar-item">
+                  <div class="step-bar-label">
+                    <span>40% Contra Escritura</span>
+                    <strong>Entrega material y notarial del lote</strong>
+                  </div>
+                  <div class="bar-track"><div class="bar-fill" style="width: 40%;"></div></div>
+                </div>
+              </div>
+              <a href="https://wa.me/573122384172?text=Hola%20Grupo%20AAA%2C%20me%20interesa%20el%20Plan%20de%20Pago%20Escalonado%20por%20hitos%20para%20Corales%20del%20Viento" class="btn-primary">Elegir Plan Escalonado</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         1️⃣1️⃣ MAPA INTERACTIVO CON CONTEXTO GEOGRÁFICO
+         ========================================== -->
+    <section class="location-section" id="ubicacion" aria-label="Ubicación y Entorno Náutico">
+      <div class="section-container">
+        <div class="section-header text-center">
+          <div class="kicker">Entorno Caribeño</div>
+          <h2 class="section-title">Ubicación & Conectividad</h2>
+          <p class="section-subtitle">San Bernardo del Viento, Córdoba: una de las bahías más protegidas, tranquilas y de mayor potencial del norte colombiano.</p>
+        </div>
+
+        <div class="map-interactive-layout">
+          <!-- Mapa Leaflet Interactivo Estilizado -->
+          <div class="leaflet-map-wrapper">
+            <div id="interactiveMap" class="leaflet-map-element" aria-label="Mapa interactivo de ubicación"></div>
+            
+            <!-- Widget de Clima Marino en Vivo -->
+            <div class="marine-weather-widget">
+              <div class="weather-icon">☀️</div>
+              <div class="weather-details">
+                <span class="temp">29°C · Soleado</span>
+                <span class="wind">Brisa Marina: 18 km/h NE · Oleaje Suave</span>
+              </div>
+            </div>
+
+            <!-- Botones Rápidos sobre el Mapa -->
+            <div class="map-floating-actions">
+              <button class="map-action-btn" id="btnCenterProject" title="Centrar en el Condominio">
+                📍 Ver Proyecto
+              </button>
+              <button class="map-action-btn" id="btnCopyCoords" title="Copiar Coordenadas GPS">
+                📋 Copiar GPS
+              </button>
+            </div>
+          </div>
+
+          <!-- Panel Lateral de Información y Distancias -->
+          <div class="map-sidebar-info">
+            <div class="location-header-card">
+              <span class="loc-badge">Georreferenciación Exacta</span>
+              <h3>Condominio Corales del Viento</h3>
+              <p class="address">San Bernardo del Viento, Vereda Playas del Viento, Córdoba, Colombia</p>
+              <div class="coords-box">
+                <span class="coords-label">Coordenadas GPS:</span>
+                <code class="coords-code" id="gpsCoordsText">9.354200, -75.952100</code>
+              </div>
+            </div>
+
+            <!-- Distancias Clave -->
+            <div class="distances-list">
+              <div class="dist-item">
+                <span class="dist-icon">🌊</span>
+                <div class="dist-text">
+                  <strong>150 metros</strong>
+                  <span>Acceso a la orilla del mar Caribe</span>
+                </div>
+              </div>
+              <div class="dist-item">
+                <span class="dist-icon">🏘️</span>
+                <div class="dist-text">
+                  <strong>3.2 km (5 min)</strong>
+                  <span>Casco Urbano San Bernardo del Viento</span>
+                </div>
+              </div>
+              <div class="dist-item">
+                <span class="dist-icon">🚤</span>
+                <div class="dist-text">
+                  <strong>20 minutos en lancha</strong>
+                  <span>Isla Fuerte (Reserva de coral y buceo)</span>
+                </div>
+              </div>
+              <div class="dist-item">
+                <span class="dist-icon">✈️</span>
+                <div class="dist-text">
+                  <strong>95 km (1h 20m)</strong>
+                  <span>Aeropuerto Los Garzones (Montería)</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Botón Externo a Google Maps / Waze -->
+            <a href="https://maps.google.com/?q=9.3542,-75.9521" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="btn-secondary w-full text-center" 
+               id="btnOpenGoogleMaps">
+              Abrir en Google Maps / Waze
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         1️⃣2️⃣ FAQ CON ACCORDION AVANZADO & BÚSQUEDA
+         ========================================== -->
+    <section class="faq-section" id="faq" aria-label="Preguntas Frecuentes">
+      <div class="section-container">
+        <div class="section-header text-center">
+          <div class="kicker">Claridad Absoluta</div>
+          <h2 class="section-title">Preguntas Frecuentes</h2>
+          <p class="section-subtitle">Respuestas claras y fundamentadas a las dudas más comunes de nuestros compradores.</p>
+        </div>
+
+        <div class="faq-search-wrapper">
+          <div class="faq-search-input-group">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+            <input type="text" id="faqSearchInput" placeholder="¿Qué quieres saber? (ej: escrituras, agua, cuotas, playa...)" autocomplete="off">
+          </div>
+
+          <!-- Filtro por Categorías FAQ -->
+          <div class="faq-category-pills" role="tablist">
+            <button class="faq-pill active" data-cat="all">Todas</button>
+            <button class="faq-pill" data-cat="legal">Legal & Títulos</button>
+            <button class="faq-pill" data-cat="financiero">Financiero</button>
+            <button class="faq-pill" data-cat="servicios">Servicios & Obras</button>
+            <button class="faq-pill" data-cat="ubicacion">Ubicación</button>
+          </div>
+        </div>
+
+        <!-- Lista Acordeón de FAQs -->
+        <div class="faq-accordion-list" id="faqAccordionList">
+          <!-- Item 1: Legal -->
+          <div class="faq-item" data-cat="legal">
+            <button class="faq-header" aria-expanded="false">
+              <span class="faq-num">01</span>
+              <span class="faq-question">¿Los lotes cuentan con escritura pública y matrícula independiente?</span>
+              <span class="faq-chevron">▾</span>
+            </button>
+            <div class="faq-body">
+              <div class="faq-content">
+                <p><strong>Sí, rotundamente.</strong> Cada lote de Corales del Viento cuenta con su folio de matrícula inmobiliaria independiente registrado ante la Oficina de Registro de Instrumentos Públicos. No vendemos cesiones de derechos ni proindivisos; eres el único dueño legítimo de tu predio desde la firma notarial.</p>
+                <div class="faq-feedback">
+                  <span>¿Te fue útil esta respuesta?</span>
+                  <button class="btn-fb-thumb" data-useful="yes">👍 Sí</button>
+                  <button class="btn-fb-thumb" data-useful="no">👎 No</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2: Servicios -->
+          <div class="faq-item" data-cat="servicios">
+            <button class="faq-header" aria-expanded="false">
+              <span class="faq-num">02</span>
+              <span class="faq-question">¿Cómo se garantiza el suministro de agua y energía eléctrica?</span>
+              <span class="faq-chevron">▾</span>
+            </button>
+            <div class="faq-body">
+              <div class="faq-content">
+                <p>El condominio cuenta con tendido de red eléctrica certificada por el operador regional de energía y acometida a pie de cada lote. Para el agua potable, se cuenta con una red hidráulica interna alimentada por pozos profundos con sistema de purificación y filtración marina continua.</p>
+                <div class="faq-feedback">
+                  <span>¿Te fue útil esta respuesta?</span>
+                  <button class="btn-fb-thumb" data-useful="yes">👍 Sí</button>
+                  <button class="btn-fb-thumb" data-useful="no">👎 No</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 3: Financiero -->
+          <div class="faq-item" data-cat="financiero">
+            <button class="faq-header" aria-expanded="false">
+              <span class="faq-num">03</span>
+              <span class="faq-question">¿Puedo comprar si estoy reportado en centrales de riesgo o resido en el exterior?</span>
+              <span class="faq-chevron">▾</span>
+            </button>
+            <div class="faq-body">
+              <div class="faq-content">
+                <p><strong>Sí.</strong> Mediante nuestro <em>Crédito Directo Grupo AAA</em>, no consultamos Datacrédito ni centrales financieras. Para colombianos en el exterior (EE.UU., España, Chile, etc.), todo el proceso de asesoría, reserva y firma puede gestionarse mediante poder notarial consular de forma 100% legal.</p>
+                <div class="faq-feedback">
+                  <span>¿Te fue útil esta respuesta?</span>
+                  <button class="btn-fb-thumb" data-useful="yes">👍 Sí</button>
+                  <button class="btn-fb-thumb" data-useful="no">👎 No</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 4: Construcción -->
+          <div class="faq-item" data-cat="servicios">
+            <button class="faq-header" aria-expanded="false">
+              <span class="faq-num">04</span>
+              <span class="faq-question">¿Hay un tiempo límite para construir o un manual arquitectónico?</span>
+              <span class="faq-chevron">▾</span>
+            </button>
+            <div class="faq-body">
+              <div class="faq-content">
+                <p>No existe una fecha límite obligatoria para iniciar la construcción de tu casa; tu terreno se valoriza día a día aunque decidas conservarlo como inversión. Existe un <em>Manual de Convivencia y Urbanismo</em> que promueve construcciones bioclimáticas (madera teca, concreto a la vista, cubiertas en palma o teja termoacústica) para preservar la armonía estética y el valor del condominio.</p>
+                <div class="faq-feedback">
+                  <span>¿Te fue útil esta respuesta?</span>
+                  <button class="btn-fb-thumb" data-useful="yes">👍 Sí</button>
+                  <button class="btn-fb-thumb" data-useful="no">👎 No</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 5: Ubicación -->
+          <div class="faq-item" data-cat="ubicacion">
+            <button class="faq-header" aria-expanded="false">
+              <span class="faq-num">05</span>
+              <span class="faq-question">¿Qué tan accesible es el acceso a la playa desde mi lote?</span>
+              <span class="faq-chevron">▾</span>
+            </button>
+            <div class="faq-body">
+              <div class="faq-content">
+                <p>El condominio cuenta con un sendero peatonal y ecológico privado que conecta directamente el interior del proyecto con la orilla de la playa en apenas <strong>150 metros</strong> (2 a 3 minutos caminando). Las playas de San Bernardo del Viento se caracterizan por sus aguas cálidas, arena dorada y poco oleaje.</p>
+                <div class="faq-feedback">
+                  <span>¿Te fue útil esta respuesta?</span>
+                  <button class="btn-fb-thumb" data-useful="yes">👍 Sí</button>
+                  <button class="btn-fb-thumb" data-useful="no">👎 No</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-more-help text-center">
+          <p>¿Tienes una duda particular que no esté listada?</p>
+          <a href="https://wa.me/573122384172?text=Hola%20Grupo%20AAA%2C%20tengo%20una%20pregunta%20espec%C3%ADfica%20sobre%20Corales%20del%20Viento" class="btn-primary">Hablar con un Asesor Jurídico</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================
+       FOOTER CORPORATIVO DE LUJO
+       ========================================== -->
+  <footer class="site-footer" id="contacto">
+    <div class="footer-container">
+      <div class="footer-top-grid">
+        <!-- Columna Marca -->
+        <div class="footer-brand-col">
+          <div class="brand-logo footer-logo">
+            <div class="logo-badge">
+              <span class="badge-text">AAA</span>
+            </div>
+            <div class="logo-meta">
+              <span class="company-name">GRUPO AAA S.A.S</span>
+              <span class="project-tag">Firma Inmobiliaria & Desarrollos</span>
+            </div>
+          </div>
+          <p class="footer-about">
+            Desarrolladora inmobiliaria líder en la estructuración de comunidades campestres, condominios vacacionales y proyectos costeros de alta plusvalía en Córdoba y el Caribe colombiano. Transformamos tierras privilegiadas en patrimonios seguros con blindaje jurídico total.
+          </p>
+          <div class="footer-badges">
+            <span class="f-badge">NIT: 901.554.892-1</span>
+            <span class="f-badge">Matrículas Independientes</span>
+            <span class="f-badge">Múltiples Proyectos</span>
+          </div>
+        </div>
+
+        <!-- Columna Enlaces -->
+        <div class="footer-links-col">
+          <h4 class="footer-heading">Navegación Rápida</h4>
+          <ul class="footer-nav">
+            <li><a href="#hero">Inicio</a></li>
+            <li><a href="#proyectos">Portafolio de Proyectos</a></li>
+            <li><a href="#galeria-3d">Corales del Viento 3D</a></li>
+            <li><a href="#servicios">Servicios Inmobiliarios</a></li>
+            <li><a href="#nosotros">Quiénes Somos</a></li>
+            <li><a href="#buscador">Lotes en Venta</a></li>
+            <li><a href="#financiamiento">Simulador de Crédito</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna Contacto -->
+        <div class="footer-contact-col">
+          <h4 class="footer-heading">Atención al Cliente</h4>
+          <ul class="contact-list">
+            <li>
+              <span class="c-icon">📍</span>
+              <span>San Bernardo del Viento, Córdoba, Colombia</span>
+            </li>
+            <li>
+              <span class="c-icon">📞</span>
+              <a href="tel:+573122384172">+57 312 238 4172</a>
+            </li>
+            <li>
+              <span class="c-icon">💬</span>
+              <a href="https://wa.me/573122384172" target="_blank" rel="noopener">WhatsApp Directo 24/7</a>
+            </li>
+            <li>
+              <span class="c-icon">✉️</span>
+              <a href="mailto:contacto@grupoaaainmobiliaria.com">contacto@grupoaaainmobiliaria.com</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <p>&copy; 2026 GRUPO AAA S.A.S. Todos los derechos reservados. Corales del Viento es una marca registrada.</p>
+        <div class="legal-links">
+          <a href="#faq">Términos de Servicio</a>
+          <span class="dot">•</span>
+          <a href="#faq">Política de Privacidad</a>
+          <span class="dot">•</span>
+          <a href="#faq">Aviso Legal</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================
+       WIDGET FLOTANTE DE WHATSAPP CON MODAL
+       ========================================== -->
+  <div class="floating-wa-wrapper" id="floatingWaWrapper">
+    <button class="wa-float-btn" id="waFloatBtn" aria-label="Abrir chat de WhatsApp">
+      <span class="wa-float-ping"></span>
+      <svg class="wa-icon-large" viewBox="0 0 24 24" width="32" height="32" fill="#FFFFFF">
+        <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.699c.971.53 1.77.813 2.796.813h.005c3.179 0 5.767-2.587 5.767-5.766.001-3.187-2.575-5.999-5.772-5.999zm3.385 8.163c-.145.411-.744.757-1.028.805-.285.048-.654.076-2.128-.535-1.875-.778-3.08-2.698-3.175-.824-.095-.126-.749-.997-.749-1.902 0-.904.475-1.35.644-1.534.17-.184.37-.23.493-.23.123 0 .247.001.354.006.113.006.264-.043.413.315.15.358.513 1.25.558 1.342.045.093.076.201.015.323-.061.123-.092.2-.183.307-.092.108-.194.24-.277.323-.093.092-.19.193-.082.379.108.185.48 792 1.028 1.28.705.629 1.3 1.823 1.485 1.916.185.093.293.077.4-.046.108-.124.462-.538.585-.723.123-.185.246-.154.415-.092.17.062 1.077.508 1.262.6.185.092.308.139.354.215.046.077.046.446-.099.857z"/>
+      </svg>
+    </button>
+
+    <!-- Modal Emergente de Chat WhatsApp -->
+    <div class="wa-chat-modal" id="waChatModal" role="dialog" aria-hidden="true">
+      <div class="wa-chat-header">
+        <div class="wa-avatar-ring">
+          <span class="wa-avatar">AAA</span>
+          <span class="online-indicator"></span>
+        </div>
+        <div class="wa-agent-meta">
+          <strong>Asesor Comercial Grupo AAA</strong>
+          <small>En línea · Respuesta en &lt; 5 min</small>
+        </div>
+        <button class="wa-close-btn" id="waCloseBtn" aria-label="Cerrar chat">✕</button>
+      </div>
+
+      <div class="wa-chat-body">
+        <div class="wa-msg-bubble incoming">
+          <p>¡Hola! 👋 Bienvenido a <strong>Corales del Viento</strong>. ¿Te gustaría conocer los lotes disponibles frente al mar o agendar una llamada con un asesor?</p>
+          <span class="msg-time">Ahora</span>
+        </div>
+      </div>
+
+      <div class="wa-chat-footer">
+        <a href="https://wa.me/573122384172?text=Hola%20Grupo%20AAA%2C%20estoy%20viendo%20la%20p%C3%A1gina%20web%20de%20Corales%20del%20Viento%20y%20quiero%20informaci%C3%B3n%20sobre%20lotes%20disponibles" 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           class="wa-start-chat-btn">
+          Iniciar Chat en WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       MODAL LIGHTBOX FULLSCREEN (Galería de Fotos)
+       ========================================== -->
+  <div class="lightbox-modal" id="lightboxModal" role="dialog" aria-hidden="true">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Cerrar visor">✕</button>
+    <div class="lightbox-stage">
+      <button class="lightbox-arrow prev" id="lightboxPrev" aria-label="Imagen anterior">❮</button>
+      <div class="lightbox-figure">
+        <img src="" alt="" id="lightboxImg" class="lightbox-img">
+        <div class="lightbox-caption" id="lightboxCaption">
+          <span class="caption-title" id="lightboxCaptionTitle">Título de la foto</span>
+          <span class="caption-counter" id="lightboxCaptionCounter">1 de 6</span>
+        </div>
+      </div>
+      <button class="lightbox-arrow next" id="lightboxNext" aria-label="Siguiente imagen">❯</button>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       TOAST NOTIFICATION (Para copiado de GPS o avisos)
+       ========================================== -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- ==========================================
+       SCRIPTS EXTERNOS: Three.js, OrbitControls, GSAP, Leaflet, Canvas-Confetti
+       ========================================== -->
+  <!-- Three.js r128 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <!-- Three.js OrbitControls -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+  <!-- GSAP 3 + ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <!-- Leaflet Map -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <!-- Canvas Confetti -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+  <!-- Lógica Principal de la Aplicación -->
+  <script src="app.js"></script>
+</body>
+</html>
