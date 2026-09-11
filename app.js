@@ -392,7 +392,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!canvas || !container || typeof THREE === 'undefined') return;
 
     const scene = new THREE.Scene();
-    scene.background = new THREE.Color(0x0a1524);
+    scene.background = new THREE.Color(0xe0f2fe);
 
     const camera = new THREE.PerspectiveCamera(
       45,
@@ -567,8 +567,8 @@ document.addEventListener('DOMContentLoaded', () => {
       if (panelDist) panelDist.textContent = `${lot.dist} a la orilla`;
       if (panelStatus) {
         panelStatus.textContent = lot.status;
-        panelStatus.style.background = lot.status === 'Disponible' ? 'rgba(34, 197, 94, 0.2)' : 'rgba(234, 179, 8, 0.2)';
-        panelStatus.style.color = lot.status === 'Disponible' ? '#4ADE80' : '#FBBF24';
+        panelStatus.style.background = lot.status === 'Disponible' ? 'rgba(16, 185, 129, 0.15)' : 'rgba(245, 158, 11, 0.15)';
+        panelStatus.style.color = lot.status === 'Disponible' ? '#047857' : '#b45309';
       }
       if (panelWaBtn) {
         panelWaBtn.href = `https://wa.me/573122384172?text=Hola%20Grupo%20AAA%2C%20estoy%20interesado%20en%20el%20${encodeURIComponent(lot.title)}%20con%20precio%20de%20${encodeURIComponent(lot.price)}%20que%20vi%20en%20el%20Master%20Plan%203D`;
